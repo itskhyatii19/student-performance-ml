@@ -8,7 +8,7 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This project implements a **complete end-to-end machine learning pipeline** to predict student academic performance using real-world educational data.  
 It demonstrates practical skills in **data preprocessing, exploratory data analysis (EDA), feature engineering, model training, evaluation, and prediction**.
@@ -17,7 +17,7 @@ The project is designed to reflect **industry-style ML workflows**, with modular
 
 ---
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 Educational institutions often struggle to identify students who may be at academic risk early enough to provide targeted support.
 
@@ -40,7 +40,7 @@ The objective of this project is to build a predictive model that estimates stud
 
 ---
 
-## 🧠 Machine Learning Pipeline
+##  Machine Learning Pipeline
 
 The project follows a structured ML workflow:
 
@@ -71,7 +71,7 @@ The project follows a structured ML workflow:
 
 ---
 
-## 🤖 Models & Evaluation
+##  Models & Evaluation
 
 **Models Implemented:**
 - Linear Regression
@@ -90,7 +90,7 @@ model.pkl
 ---
 
 ## 📁 Project Structure
-
+```
 student-performance-ml/
 │
 ├── data/
@@ -113,7 +113,7 @@ student-performance-ml/
 ├── README.md
 ├── LICENSE
 └── .gitignore
-
+```
 
 ---
 
@@ -132,9 +132,10 @@ python src/train_model.py
 Make predictions
 
 python src/predict.py
-🧪 Key Learnings
-Through this project, I gained hands-on experience in:
-
+```
+##  Key Learnings
+### Through this project, I gained hands-on experience in:
+```text
 Building end-to-end machine learning pipelines
 
 Applying feature engineering techniques to improve model performance
@@ -144,8 +145,9 @@ Evaluating and comparing multiple ML models
 Structuring ML projects using modular, maintainable code
 
 Working with real-world datasets and metrics
-
-🚀 Future Improvements
+```
+## 🚀 Future Improvements
+```bash
 Hyperparameter tuning for improved performance
 
 Model deployment using FastAPI or Streamlit
@@ -153,9 +155,9 @@ Model deployment using FastAPI or Streamlit
 Adding automated data validation
 
 Experiment tracking using MLflow
-
-👩‍💻 Author
-Khyati Sharma
+```
+##  Author
+### Khyati Sharma
 B.Tech in Artificial Intelligence
 Interested in applied machine learning and data-driven problem solving
 
