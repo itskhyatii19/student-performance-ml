@@ -1,36 +1,104 @@
-# 🎓 Student Performance Prediction – End-to-End ML Project
+# 🎓 Student Performance Prediction – End-to-End Machine Learning Project
 
-![Python](https://img.shields.io/badge/Python-3.9+-blue)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--learn-orange)
-![Status](https://img.shields.io/badge/Status-Portfolio%20Project-success)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Dataset](https://img.shields.io/badge/Dataset-Kaggle-lightgrey)
-
-> An **end-to-end machine learning pipeline** to predict students’ final grades using real-world educational data.  
-Built as a **portfolio project** to demonstrate practical ML workflows, clean project structuring, and evaluation.
+![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange.svg)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-brightgreen.svg)
+![Status](https://img.shields.io/badge/Project-Completed-success.svg)
+![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)
 
 ---
 
-## 📌 Project Overview
+## 📌 Overview
 
-This project predicts the **final grade (G3)** of students based on academic performance, family background, and lifestyle factors.
+This project implements a **complete end-to-end machine learning pipeline** to predict student academic performance using real-world educational data.  
+It demonstrates practical skills in **data preprocessing, exploratory data analysis (EDA), feature engineering, model training, evaluation, and prediction**.
 
-The **Actual vs Predicted** plot shows strong alignment along the diagonal, indicating:
-- Low prediction error
-- Good generalization performance
+The project is designed to reflect **industry-style ML workflows**, with modular scripts and a clean project structure.
 
 ---
 
-## 🗂 Project Structure
+## 🎯 Problem Statement
+
+Educational institutions often struggle to identify students who may be at academic risk early enough to provide targeted support.
+
+The objective of this project is to build a predictive model that estimates student performance based on academic, demographic, and behavioral features, helping uncover key factors influencing academic outcomes.
+
+---
+
+## 📊 Dataset
+
+- **Source:** Student Performance Dataset (UCI / Kaggle)
+- **Raw Data:** `data/raw/student_data.csv`
+- **Processed Data:**  
+  - `data/processed/cleaned_data.csv`  
+  - `data/processed/features.csv`
+- **Target Variable:** Student performance score / grade
+- **Features Include:**
+  - Demographic information
+  - Study-related habits
+  - Academic history
+
+---
+
+## 🧠 Machine Learning Pipeline
+
+The project follows a structured ML workflow:
+
+1. **Data Cleaning**
+   - Handling missing values
+   - Removing inconsistencies
+   - Cleaning raw input data
+
+2. **Exploratory Data Analysis (EDA)**
+   - Understanding feature distributions
+   - Identifying correlations and patterns
+
+3. **Feature Engineering**
+   - Encoding categorical variables
+   - Scaling numerical features
+   - Creating model-ready datasets
+
+4. **Model Training**
+   - Train-test split
+   - Training multiple ML models
+
+5. **Model Evaluation**
+   - Comparing models using standard metrics
+   - Selecting the best-performing model
+
+6. **Prediction**
+   - Making predictions on new or unseen data
+
+---
+
+## 🤖 Models & Evaluation
+
+**Models Implemented:**
+- Linear Regression
+- Random Forest Regressor
+- (Add any additional models if applicable)
+
+**Evaluation Metrics:**
+- R² Score
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+
+The final trained model is saved as:
+model.pkl
+
+
+---
+
+## 📁 Project Structure
 
 student-performance-ml/
 │
 ├── data/
 │ ├── raw/
 │ │ └── student_data.csv
-│ ├── processed/
-│ │ ├── cleaned_data.csv
-│ │ └── features.csv
+│ └── processed/
+│ ├── cleaned_data.csv
+│ └── features.csv
 │
 ├── src/
 │ ├── data_cleaning.py
@@ -42,115 +110,55 @@ student-performance-ml/
 │
 ├── model.pkl
 ├── requirements.txt
-└── README.md
+├── README.md
+├── LICENSE
+└── .gitignore
 
 
 ---
 
-## 📊 Dataset
+## ⚙️ How to Run the Project
 
-- **Source:** Kaggle – Student Performance Dataset  
-- **Rows:** ~395  
-- **Features:** Academic, family, and lifestyle factors  
-- **Target Variable:** Final Grade (`G3`)
-
----
-
-## 🔁 Machine Learning Pipeline
-
-### 1️⃣ Data Cleaning
-- Remove duplicate rows  
-- Handle missing numeric values  
-- Save cleaned dataset  
-
-### 2️⃣ Exploratory Data Analysis (EDA)
-- Grade distribution analysis  
-- Correlation heatmaps  
-- Feature trend analysis  
-
-### 3️⃣ Feature Engineering
-- One-hot encoding for categorical variables  
-- Feature selection  
-- Save engineered feature set  
-
-### 4️⃣ Model Training
-- Train / Test split  
-- **Ridge Regression**  
-- Model persistence using `joblib`  
-
-### 5️⃣ Evaluation
-- Mean Absolute Error (MAE)  
-- R² Score  
-- Actual vs Predicted visualization  
-
----
-
-## 📈 Model Performance
-
-| Metric | Value |
-|------|------|
-| **MAE** | ~0.95 |
-| **R² Score** | ~0.83 |
-
-✔ Indicates strong predictive performance  
-✔ Low average prediction error  
-
----
-
-## 🔍 Key Insights
-
-- **Previous exam score (G2)** is the strongest predictor  
-- **Family support** positively impacts performance  
-- **Parental profession** shows measurable influence  
-- Students from **urban areas** perform slightly better  
-- Feature importance extracted from **Ridge Regression coefficients**
-
----
-
-## ▶ How to Run
-
-### 1️⃣ Install dependencies
+1. **Clone the repository**
 ```bash
+git clone https://github.com/itskhyatii19/student-performance-ml.git
+cd student-performance-ml
+Install dependencies
+
 pip install -r requirements.txt
-2️⃣ Data cleaning
-python src/data_cleaning.py
-3️⃣ Feature engineering
-python src/feature_engineering.py
-4️⃣ Train model
+Run the ML pipeline
+
 python src/train_model.py
-5️⃣ Evaluate model
-python src/evaluation.py
-6️⃣ Make prediction
-python src/predict.py --g2 15 --failures 0 --famsup yes --medu 4
-🛠 Tech Stack
-Python
+Make predictions
 
-Pandas
+python src/predict.py
+🧪 Key Learnings
+Through this project, I gained hands-on experience in:
 
-NumPy
+Building end-to-end machine learning pipelines
 
-Matplotlib
+Applying feature engineering techniques to improve model performance
 
-Scikit-learn
+Evaluating and comparing multiple ML models
+
+Structuring ML projects using modular, maintainable code
+
+Working with real-world datasets and metrics
 
 🚀 Future Improvements
-Experiment with tree-based models
+Hyperparameter tuning for improved performance
 
-Hyperparameter tuning
+Model deployment using FastAPI or Streamlit
 
-Cross-validation
+Adding automated data validation
 
-Deploy as a web application
+Experiment tracking using MLflow
 
 👩‍💻 Author
 Khyati Sharma
-🎓 B.Tech AI Student
-💻 Aspiring Machine Learning Engineer
+B.Tech in Artificial Intelligence
+Interested in applied machine learning and data-driven problem solving
 
-📌 About
-End-to-end machine learning pipeline to predict student performance using real-world data. Includes data cleaning, feature engineering, model training, evaluation, and interpretation.
+🔗 GitHub: https://github.com/itskhyatii19
 
-⭐ Support
-If you found this project useful, consider giving it a ⭐
-It helps me stay motivated to build more!
-
+⭐ If you find this project useful or insightful, feel free to star the repository!
